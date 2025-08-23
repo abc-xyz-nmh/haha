@@ -12,8 +12,8 @@ getgenv().ConfigsKaitun = {
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 250,
-		["Destroy Until"] = 225,
+		["Limit"] = 400,
+		["Destroy Until"] = 375,
 
 		["Safe Tree"] = {
             "Moon Blossom",
@@ -98,7 +98,7 @@ getgenv().ConfigsKaitun = {
 		["Bean Event"] = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
 		},
-		MaxMoney_Restocks = 500_000_000_000,
+		MaxMoney_Restocks = 1_000_000_000_000,
 		Shop = { -- un comment to buy
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -119,6 +119,7 @@ getgenv().ConfigsKaitun = {
 		Craft = {
 			"Anti Bee Egg",
 			"Skyroot Chest",
+			"Sprout Egg",
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
