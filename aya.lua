@@ -164,10 +164,11 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
+				["Seal"] = { 8, 100 },
 				["Capybara"] = { 1, 100 },
 				["Rooster"] = { 5, 100 },
-				["Sunny-Side Chicken"] = { 5, 100 },
-                ["Starfish"] = { 2, 100 },
+                ["Starfish"] = { 1, 100 },
+                ["Sunny-Side Chicken"] = { 5, 100 },
 			},
 		},
 		Unfavorite_AllPet = false,
