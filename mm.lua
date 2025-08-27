@@ -3,12 +3,11 @@ setfpscap(2)
 
 getgenv().gagConfig = {
     -- Event:
-    CRAFT_EVENT = { "Anti Bee Egg", "Skyroot Chest", "Sprout Egg" },
-    BUY_TRAVELING_MERCHANT = { "Bee Egg", "Primal Egg", "Paradise Egg" },
+    CRAFT_EVENT = { "Anti Bee Egg", "Sprout Egg" },
+    BUY_TRAVELING_MERCHANT = { "Bee Egg", "Primal Egg", "Paradise Egg", "Rare Summer Egg", "Common Summer Egg" },
     CLAIM_FOOD_CONNOISSEUR_REWARD = {"Culinarian Chest", "Gourmet Egg", "Gorilla Chef"},
-    MAX_EVENT_RESTOCK_SHECKLES = 10_000_000_000_000,  -- Restock stop at..
-    BUY_EVENT_SHOP = { "Sprout Egg", "Skyroot Chest", "Sprout Seed Pack", "Gnome" },
-    PLANT_EVENT_TREES = true,  -- This config will replace most plant related config
+    MAX_EVENT_RESTOCK_SHECKLES = 50_000_000_000_000,  -- Restock stop at..
+    BUY_EVENT_SHOP = { "Sprout Egg", "Skyroot Chest", "Sprout Seed Pack" },
     
     -- General:
     AUTO_UPDATE_RESTART = false,
@@ -22,8 +21,8 @@ getgenv().gagConfig = {
     MAX_PLANTS = 450,
     DESTROY_UNTIL_MIN_PLANTS = 400,
     
-    BUY_EGGS = { "Bug Egg", "Bee Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg", "Common Summer Egg", "Rare Egg", "Uncommon Egg", "Legendary Egg" },
-    PLANT_EGGS = { "Gourmet Egg", "Sprout Egg", "Zen Egg", "Dinosaur Egg", "Primal Egg", "Anti Bee Egg", "Bee Egg", "Night Egg", "Bug Egg", "Paradise Egg", "Mythical Egg", "Common Summer Egg", "Rare Egg", "Legendary Egg" },
+     BUY_EGGS = { "Bug Egg", "Bee Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg", "Common Summer Egg", "Rare Egg", "Uncommon Egg", "Legendary Egg" },
+     PLANT_EGGS = { "Gourmet Egg", "Zen Egg", "Dinosaur Egg", "Primal Egg", "Anti Bee Egg", "Bee Egg", "Night Egg", "Bug Egg", "Paradise Egg", "Mythical Egg", "Common Summer Egg", "Rare Egg", "Legendary Egg" },
     
     -- BUY_SEED_SHOP Priority (Left -> Right)
     BUY_SEED_SHOP = { "Romanesco", "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Mushroom", "Grape", "Mango", "Dragon Fruit", "Cactus", "Coconut", "Bamboo", "Apple", "Pumpkin", "Watermelon", "Daffodil", "Tomato", "Orange Tulip", "Blueberry", "Strawberry", "Carrot" },
@@ -36,8 +35,8 @@ getgenv().gagConfig = {
     KEEP_PETS_WEIGHT = 5,
 
     -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = { ["Seal"] = 8, ["Sunny-Side Chicken"] = 5, ["Capybara"] = 1, ["Rooster"] = 5, ["Starfish"] = 8},
-    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
+    EQUIP_PETS = { ["Sunny-Side Chicken"] = 5, ["Capybara"] = 1, ["Starfish"] = 8, ["Brown Mouse"] = 2, ["Squirrel"] = 1, ["Rooster"] = 4, ["Grey Mouse"] = 2, },
+    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish", "Brown Mouse", "Grey Mouse" },
 
     BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
     USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
@@ -47,8 +46,15 @@ getgenv().gagConfig = {
     NOTIFY_PETS = { "Griffin", "Golden Goose", "Lobster Thermidor", "French Fry Ferret", "Corrupted Kitsune", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Red Fox", "Spinosaurus"},
     NOTIFY_PETS_WEIGHT = 5,
     DISCORD_ID = "",
-    WEBHOOK_NOTE = "idk",
+    WEBHOOK_NOTE = "xxx",
     SHOW_WEBHOOK_USERNAME = true,
 }
 
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/c916e5b90dc37c71ecf1ec00dfce3d5d.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a2234a9cfbe480dfed9eaf6c00a012ca.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/PHUCKDUBITCHdzza/config/refs/heads/main/chest.lua"))()
+
+
+
+
+
+
