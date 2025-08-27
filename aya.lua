@@ -123,7 +123,6 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Gourmet Egg",
-			"Sprout Egg",
 			"Zen Egg",
 			"Primal Egg",
 			"Dinosaur Egg",
@@ -168,6 +167,9 @@ getgenv().ConfigsKaitun = {
 				["Capybara"] = { 1, 100 },
 				["Rooster"] = { 5, 100 },
                 ["Starfish"] = { 1, 100 },
+                ["Brown Mouse"] = { 1, 100 },
+                ["Squirrel"] = { 1, 100 }, 
+                ["Grey Mouse"] = { 1, 100 },
                 ["Sunny-Side Chicken"] = { 5, 100 },
 			},
 		},
