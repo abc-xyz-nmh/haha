@@ -3,11 +3,11 @@ setfpscap(2)
 
 getgenv().gagConfig = {
     -- Event:
-    CRAFT_EVENT = { "Anti Bee Egg", "Sprout Egg" },
+    CRAFT_EVENT = { "Anti Bee Egg", "Skyroot Chest", "Sprout Egg" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Primal Egg", "Paradise Egg", "Rare Summer Egg", "Common Summer Egg" },
     CLAIM_FOOD_CONNOISSEUR_REWARD = {"Culinarian Chest", "Gourmet Egg", "Gorilla Chef"},
     MAX_EVENT_RESTOCK_SHECKLES = 50_000_000_000_000,  -- Restock stop at..
-    BUY_EVENT_SHOP = { "Sprout Egg", "Skyroot Chest", "Sprout Seed Pack" },
+    BUY_EVENT_SHOP = { "Sprout Egg", "Skyroot Chest", "Sprout Seed Pack", "Gnome" },
     
     -- General:
     AUTO_UPDATE_RESTART = false,
@@ -22,7 +22,7 @@ getgenv().gagConfig = {
     DESTROY_UNTIL_MIN_PLANTS = 400,
     
      BUY_EGGS = { "Bug Egg", "Bee Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg", "Common Summer Egg", "Rare Egg", "Uncommon Egg", "Legendary Egg" },
-     PLANT_EGGS = { "Gourmet Egg", "Zen Egg", "Dinosaur Egg", "Primal Egg", "Anti Bee Egg", "Bee Egg", "Night Egg", "Bug Egg", "Paradise Egg", "Mythical Egg", "Common Summer Egg", "Rare Egg", "Legendary Egg" },
+     PLANT_EGGS = { "Gourmet Egg", "Sprout Egg", "Zen Egg", "Dinosaur Egg", "Primal Egg", "Anti Bee Egg", "Bee Egg", "Night Egg", "Bug Egg", "Paradise Egg", "Mythical Egg", "Common Summer Egg", "Rare Egg", "Legendary Egg" },
     
     -- BUY_SEED_SHOP Priority (Left -> Right)
     BUY_SEED_SHOP = { "Romanesco", "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Mushroom", "Grape", "Mango", "Dragon Fruit", "Cactus", "Coconut", "Bamboo", "Apple", "Pumpkin", "Watermelon", "Daffodil", "Tomato", "Orange Tulip", "Blueberry", "Strawberry", "Carrot" },
@@ -31,7 +31,7 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},
     SKIP_HARVEST_MUTATIONS = {},
 
-    KEEP_PETS = { "Gnome", "Griffin", "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", ["Rooster"] = 5, "Green Bean", ["Golem"] = 8, "Golden Goose", "Lobster Thermidor", ["Sunny-Side Chicken"] = 10, ["Junkbot"] = 2, "French Fry Ferret", "Corrupted Kitsune", ["Starfish"] = 8, ["Capybara"] = 4, ["Seal"] = 8, "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
+    KEEP_PETS = { "Gnome", "Griffin", "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", ["Rooster"] = 5, "Green Bean", ["Golem"] = 8, "Golden Goose", "Lobster Thermidor", ["Sunny-Side Chicken"] = 10, ["Junkbot"] = 2, "French Fry Ferret", "Corrupted Kitsune", "Starfish", "Capybara", ["Seal"] = 8, "Koi", "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
     KEEP_PETS_WEIGHT = 5,
 
     -- EQUIP_PETS Priority (Left -> Right)
