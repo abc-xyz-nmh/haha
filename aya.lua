@@ -104,6 +104,26 @@ getgenv().ConfigsKaitun = {
 	Events = {
 		["Fairy Event"] = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
+			Rewards_Item = {
+				"FairyPoints",
+				"Enchanted Egg",
+				"Enchanted Seed Pack",
+			},
+			Upgrade = {
+				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
+				Order = { -- top upgrade first, not put mean not upgrade
+					"Fairy Spawn Amount",
+					"Loose Fairy Spawn Amount",
+					"Glimmer Multiplier",
+					"Fairy Event Duration",
+				},
+				Limit = {
+					["Glimmer Multiplier"] = 10, -- max 10
+					["Loose Fairy Spawn Amount"] = 4, -- max 4
+					["Fairy Event Duration"] = 10, -- max 10
+					["Fairy Spawn Amount"] = 9, -- max 9
+				}
+			}
 		},
 		MaxMoney_Restocks = 50_000_000_000_000,
 		Shop = { -- un comment to buy
@@ -115,9 +135,9 @@ getgenv().ConfigsKaitun = {
 			-- "Amberheart",
 			-- ["Spriggan"] = 8,
 			-- Friend Shop
+			"Sprout Egg",
 			"Skyroot Chest",
 			"Pet Shard GiantBean",
-			"Gnome",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -197,6 +217,7 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
+				["Glimmering Sprite"] = { 8, 100 },
 				["Capybara"] = { 1, 100 },
 				["Rooster"] = { 5, 100 },
                 ["Starfish"] = { 1, 100 },
@@ -211,6 +232,7 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Griffin",
+			["Glimmering Sprite"] = 8,
 			"Cockatrice",
 			"Golem",
 			"Gnome",
@@ -228,7 +250,7 @@ getgenv().ConfigsKaitun = {
 			"Moon Cat",
 			["Capybara"] = 4,
 			"Chicken Zombie",
-			["Sunny-Side Chicken"] = 20,
+			["Sunny-Side Chicken"] = 8,
 			["Rooster"] =  5,
 			["Turtle"] =  3,
 			["Polar Bear"] =  3,
