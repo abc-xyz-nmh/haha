@@ -5,36 +5,67 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 60, -- cooldown to collect fruit
+	Collect_Cooldown = 90, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = true,
 
 	["Rejoin When Update"] = false,
+
+	["Auto Trade Pet"] = { -- not done yet bro dont use
+		["Enabled"] = false, 
+		["Target"] =  { -- multi users
+			"username1",
+			"username2",
+		},
+		["Pet To Send"] = {
+			
+		}
+	},
+
 	["Limit Tree"] = {
-		["Limit"] = 300,
-		["Destroy Until"] = 275,
+		["Limit"] = 400,
+		["Destroy Until"] = 400,
 
 		["Safe Tree"] = {
-            "Moon Blossom",
-            "Bone Blossom",
-            "Moon Melon",
-            "Maple Apple",
-            "Moon Mango",
-            "Dragon Pepper",
-            "Elephant Ears",
-            "Fossilight",
-            "Princess Thorn",
+			"Moon Blossom",
+			"Bone Blossom",
+			"Moon Melon",
+			"Maple Apple",
+			"Moon Mango",
+			"Dragon Pepper",
+			"Elephant Ears",
+			"Fossilight",
+			"Princess Thorn",
 			-- for the event
-            ["Blueberry"] = 15,
-            ["Strawberry"] = 15,
-            ["Apple"] = 15,
-            ["Coconut"] = 15,
-            ["Dragon Fruit"] = 15,
-            ["Mango"] = 15,
-            ["Tomato"] = 20,
-            ["Cactus"] = 15,
-            ["Beanstalk"] = 20,
+			["Bamboo"] = 2,
+			["Coconut"] = 2,
+			["Mushroom"] = 2,
+			["Glowthorn"] = 2,
+			["Tomato"] = 2,
+			["Pumpkin"] = 2,
+			["Pepper"] = 2,
+			["Cacao"] = 2,
+			["Apple"] = 2,
+			["Romanesco"] = 2,
+			["Elder Strawberry"] = 3,
+			["Burning Bud"] = 3,
+			["Giant Pinecone"] = 3,
+			["Corn"] = 3,
+			["Sugar Apple"] = 3,
+			["Ember Lily"] = 3,
+			["Dragon Fruit"] = 3,
+			["Sunbulb"] = 3,
+			["Orange Tulip"] = 3,
+			["Blueberry"] = 3,
+			["Watermelon"] = 3,
+			["Mango"] = 3,
+			["Cactus"] = 3,
+			["Strawberry"] = 3,
+			["Beanstalk"] = 3,
+			["Lightshoot"] = 3,
+			["Grape"] = 3,
+			["Daffodil"] = 3,
 		}
 	},
 
@@ -66,12 +97,12 @@ getgenv().ConfigsKaitun = {
 
 	["Seed Pack"] = {
 		Locked = {
-"Sprout Seed Pack",
+
 		}
 	},
 
 	Events = {
-		["Bean Event"] = {
+		["Fairy Event"] = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
 		},
 		MaxMoney_Restocks = 50_000_000_000_000,
@@ -157,14 +188,13 @@ getgenv().ConfigsKaitun = {
 	Pets = {
 		["Auto Feed"] = true,
 
-		["Start Delete Pet At"] = 45,
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
 			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Seal"] = { 8, 100 },
 				["Capybara"] = { 1, 100 },
 				["Rooster"] = { 5, 100 },
                 ["Starfish"] = { 1, 100 },
@@ -179,13 +209,14 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Griffin",
+			"Cockatrice",
+			"Golem",
 			"Gnome",
 			"Green Bean", 
 			"Apple Gazelle", 
 			"Lemon Lion", 
 			"Peach Wasp",
 			"Golden Goose",
-			"Golem",
 			"French Fry Ferret",
 			"Corrupted Kitsune",
 			"Raiju",
@@ -236,9 +267,8 @@ getgenv().ConfigsKaitun = {
 			},
 			Pets = {
 				"Golden Goose",
-				"Griffin",
 				"French Fry Ferret",
-				"Corrupted Kitsune",
+				"Cockatrice",
 				"Kitsune",
 				"Spinosaurus",
 				"T-Rex",
