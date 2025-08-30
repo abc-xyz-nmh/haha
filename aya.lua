@@ -12,8 +12,8 @@ getgenv().ConfigsKaitun = {
 
 	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 400,
-		["Destroy Until"] = 375,
+		["Limit"] = 300,
+		["Destroy Until"] = 275,
 
 		["Safe Tree"] = {
             "Moon Blossom",
@@ -74,7 +74,7 @@ getgenv().ConfigsKaitun = {
 		["Bean Event"] = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
 		},
-		MaxMoney_Restocks = 5_000_000_000_000,
+		MaxMoney_Restocks = 50_000_000_000_000,
 		Shop = { -- un comment to buy
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -123,6 +123,7 @@ getgenv().ConfigsKaitun = {
 	Eggs = {
 		Place = {
 			"Gourmet Egg",
+			"Sprout Egg",
 			"Zen Egg",
 			"Primal Egg",
 			"Dinosaur Egg",
@@ -196,6 +197,8 @@ getgenv().ConfigsKaitun = {
 			"Chicken Zombie",
 			["Sunny-Side Chicken"] = 20,
 			["Rooster"] =  5,
+			["Turtle"] =  3,
+			["Polar Bear"] =  3,
 			"Spinosaurus",
 			"Bear Bee",
 			"T-Rex",
