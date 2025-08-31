@@ -5,7 +5,7 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 60, -- cooldown to collect fruit
+	Collect_Cooldown = 90, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
 	["Auto Rejoin"] = false,
@@ -28,7 +28,7 @@ getgenv().ConfigsKaitun = {
 		["Destroy Until"] = 250,
 
 		["Safe Tree"] = {
-			"Moon Blossom",
+	"Moon Blossom",
 			"Bone Blossom",
 			"Moon Melon",
 			"Maple Apple",
@@ -111,15 +111,16 @@ getgenv().ConfigsKaitun = {
 				"Fairy Targeter",
 				"FairyPoints",
 				"Enchanted Seed Pack",
-				"Pet Shard Glimmering",
+				"Enchanted Crate",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
 				Order = { -- top upgrade first, not put mean not upgrade
-					"Fairy Spawn Amount",
-					"Loose Fairy Spawn Amount",
-					"Glimmer Multiplier",
-					"Fairy Event Duration",
+				"Enchanted Egg",
+				"Fairy Targeter",
+				"FairyPoints",
+				"Enchanted Seed Pack",
+				"Pet Shard Glimmering",
 				},
 				Limit = {
 					["Glimmer Multiplier"] = 10, -- max 10
@@ -220,7 +221,7 @@ getgenv().ConfigsKaitun = {
 	Pets = {
 		["Auto Feed"] = true,
 
-		["Start Delete Pet At"] = 45,
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
@@ -238,7 +239,7 @@ getgenv().ConfigsKaitun = {
 			},
 		},
 		Unfavorite_AllPet = false,
-		Favorite_LockedPet = true,
+		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Griffin",
@@ -284,9 +285,9 @@ getgenv().ConfigsKaitun = {
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1394039615949639822/ru1nhLaHQ0YheuaUN238iKf337NATfBXg224aTMSInFTWhNg24i7aPpFSIy6NAUAfr3r",
 		UrlSeed = "xxx",
-		PcName = "xxx",
+		PcName = "dew",
 
-		Mention = "", -- discord id
+		Mention = "993062998652493824", -- discord id
 
 		Noti = {
 			Seeds = {
@@ -318,7 +319,6 @@ getgenv().ConfigsKaitun = {
 	},
 }
 License = "hLv5vGDrHC1cR2eyIaPkonhV0CmU0L12"
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
 wait(10)
 -- Auto interact Fairy trong workspace["1"] -> workspace["10"]
 while true do
