@@ -5,12 +5,12 @@ getgenv().ConfigsKaitun = {
 
 	["Block Pet Gift"] = true,
 
-	Collect_Cooldown = 90, -- cooldown to collect fruit
+	Collect_Cooldown = 60, -- cooldown to collect fruit
 
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = true,
+	["Auto Rejoin"] = false,
 
-	["Rejoin When Update"] = false,
+	["Rejoin When Update"] = true,
 
 	["Auto Trade Pet"] = { -- not done yet bro dont use
 		["Enabled"] = false, 
@@ -38,7 +38,7 @@ getgenv().ConfigsKaitun = {
 			"Fossilight",
 			"Princess Thorn",
 			-- for the event
-			["Bamboo"] = 10,
+	        ["Bamboo"] = 10,
 			["Coconut"] = 5,
 			["Mushroom"] = 5,
 			["Glowthorn"] = 5,
@@ -67,6 +67,7 @@ getgenv().ConfigsKaitun = {
 			["Lightshoot"] = 5,
 			["Grape"] = 5,
 			["Daffodil"] = 5,
+			["Aurora Vine"] = 10,
 		}
 	},
 
@@ -107,10 +108,10 @@ getgenv().ConfigsKaitun = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
 			Rewards_Item = {
 				"Enchanted Egg",
-				"FairyPoints",
 				"Fairy Targeter",
+				"FairyPoints",
 				"Enchanted Seed Pack",
-				"Enchanted Crate",
+				"Pet Shard Glimmering",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
@@ -128,7 +129,7 @@ getgenv().ConfigsKaitun = {
 				}
 			}
 		},
-		MaxMoney_Restocks = 50_000_000_000_000,
+		MaxMoney_Restocks = 100_000_000_000,
 		Shop = { -- un comment to buy
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -147,11 +148,15 @@ getgenv().ConfigsKaitun = {
 			"Paradise Egg",
 			"Rare Summer Egg", 
 			"Common Summer Egg",
+			"Pitcher Plant",
+			"Feijoa",
+			"Loquat",
 		},
 		Craft = {
 			"Anti Bee Egg",
 			"Skyroot Chest",
 			"Sprout Egg",
+			"Mutation Spray Glimmering",
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
@@ -215,21 +220,21 @@ getgenv().ConfigsKaitun = {
 	Pets = {
 		["Auto Feed"] = true,
 
-		["Start Delete Pet At"] = 40,
+		["Start Delete Pet At"] = 45,
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 			},
 			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 8, 100, 1 },
-				["Capybara"] = { 1, 100 },
-				["Rooster"] = { 5, 100, 2 },
-                ["Starfish"] = { 1, 100 },
-                ["Brown Mouse"] = { 1, 100 },
-                ["Squirrel"] = { 1, 100 }, 
-                ["Grey Mouse"] = { 1, 100 },
-                ["Sunny-Side Chicken"] = { 5, 100, 2 },
+			["Glimmering Sprite"] = { 8, 100, 1 },
+			["Capybara"] = { 1, 100 },
+			["Rooster"] = { 5, 100, 2 },
+            ["Starfish"] = { 1, 100 },
+            ["Brown Mouse"] = { 1, 100 },
+            ["Squirrel"] = { 1, 100 }, 
+            ["Grey Mouse"] = { 1, 100 },
+            ["Sunny-Side Chicken"] = { 5, 100, 2 },
 			},
 		},
 		Unfavorite_AllPet = false,
@@ -314,3 +319,18 @@ getgenv().ConfigsKaitun = {
 }
 License = "hLv5vGDrHC1cR2eyIaPkonhV0CmU0L12"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+wait(10)
+-- Auto interact Fairy trong workspace["1"] -> workspace["10"]
+while true do
+    for i = 1, 10 do
+        local fairy = workspace:FindFirstChild(tostring(i))
+        if fairy then
+            local prompt = fairy:FindFirstChildWhichIsA('ProximityPrompt', true)
+            if prompt then
+                fireproximityprompt(prompt)
+                print('Đã tương tác với Fairy:', fairy.Name)
+            end
+        end
+    end
+    wait(30) -- lặp lại sau 60 giây
+end
