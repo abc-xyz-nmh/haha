@@ -56,7 +56,7 @@ getgenv().ConfigsKaitun = {
 			["Ember Lily"] = 3,
 			["Dragon Fruit"] = 3,
 			["Sunbulb"] = 3,
-			["Orange Tulip"] = 3,
+			["Orange Tulip"] = 10,
 			["Blueberry"] = 3,
 			["Watermelon"] = 3,
 			["Mango"] = 3,
@@ -105,8 +105,8 @@ getgenv().ConfigsKaitun = {
 		["Fairy Event"] = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
 			Rewards_Item = {
-				"FairyPoints",
 				"Enchanted Egg",
+				"FairyPoints",
 				"Enchanted Seed Pack",
 			},
 			Upgrade = {
