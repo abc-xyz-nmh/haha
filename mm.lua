@@ -34,7 +34,7 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},
     SKIP_HARVEST_MUTATIONS = {},
 
-    KEEP_PETS = {  ["Glimmering Sprite"] = 8, "Cockatrice", ["Imp"] = 8, ["Brown Mouse"] = 4, ["Squirrel"] = 4, ["Grey Mouse"] = 4, "Gnome", "Griffin", "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", ["Rooster"] = 5, "Green Bean", ["Golem"] = 8, "Golden Goose", "Lobster Thermidor", ["Sunny-Side Chicken"] = 10, ["Junkbot"] = 2, "French Fry Ferret", "Corrupted Kitsune", "Starfish", "Capybara", ["Seal"] = 8, "Koi", "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
+    KEEP_PETS = {  ["Pixie"] = 8, "Glimmering Sprite", "Cockatrice", ["Imp"] = 8, ["Brown Mouse"] = 4, ["Squirrel"] = 4, ["Grey Mouse"] = 4, "Gnome", "Griffin", "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", ["Rooster"] = 5, "Green Bean", ["Golem"] = 8, "Golden Goose", "Lobster Thermidor", ["Sunny-Side Chicken"] = 10, ["Junkbot"] = 2, "French Fry Ferret", "Corrupted Kitsune", "Starfish", "Capybara", ["Seal"] = 8, "Koi", "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
     KEEP_PETS_WEIGHT = 5,
 
     -- EQUIP_PETS Priority (Left -> Right)
