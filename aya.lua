@@ -234,9 +234,9 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Griffin",
-			["Glimmering Sprite"] = 8,
+			"Glimmering Sprite",
 			"Cockatrice",
-			"Golem",
+			["Pixie"] = 8,
 			"Gnome",
 			"Green Bean", 
 			"Apple Gazelle", 
@@ -254,8 +254,6 @@ getgenv().ConfigsKaitun = {
 			"Chicken Zombie",
 			["Sunny-Side Chicken"] = 8,
 			["Rooster"] =  5,
-			["Turtle"] =  3,
-			["Polar Bear"] =  3,
 			"Spinosaurus",
 			"Bear Bee",
 			"T-Rex",
