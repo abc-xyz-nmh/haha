@@ -47,6 +47,7 @@ getgenv().ConfigsKaitun = {
 			["Pepper"] = 5,
 			["Cacao"] = 5,
 			["Apple"] = 5,
+			["Wispwing"] = 10,
 			["Romanesco"] = 10,
 			["Elder Strawberry"] = 10,
 			["Burning Bud"] = 10,
