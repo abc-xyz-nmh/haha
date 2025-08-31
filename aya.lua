@@ -219,14 +219,14 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Glimmering Sprite"] = { 8, 100 },
+				["Glimmering Sprite"] = { 8, 100, 1 },
 				["Capybara"] = { 1, 100 },
-				["Rooster"] = { 5, 100 },
+				["Rooster"] = { 5, 100, 2 },
                 ["Starfish"] = { 1, 100 },
                 ["Brown Mouse"] = { 1, 100 },
                 ["Squirrel"] = { 1, 100 }, 
                 ["Grey Mouse"] = { 1, 100 },
-                ["Sunny-Side Chicken"] = { 5, 100 },
+                ["Sunny-Side Chicken"] = { 5, 100, 2 },
 			},
 		},
 		Unfavorite_AllPet = false,
