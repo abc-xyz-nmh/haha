@@ -110,20 +110,20 @@ getgenv().ConfigsKaitun = {
 				"Enchanted Egg",
 				"Fairy Targeter",
 				"FairyPoints",
+				"Pet Shard Glimmering",
+				"Aurora Vine",
 				"Enchanted Seed Pack",
-				"Enchanted Crate",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
 				Order = { -- top upgrade first, not put mean not upgrade
-				"Enchanted Egg",
-				"Fairy Targeter",
-				"FairyPoints",
-				"Enchanted Seed Pack",
-				"Pet Shard Glimmering",
+					"Fairy Spawn Amount",
+					"Loose Fairy Spawn Amount",
+					"Fairy Event Duration",
+					"Glimmer Multiplier",
 				},
 				Limit = {
-					["Glimmer Multiplier"] = 10, -- max 10
+					["Glimmer Multiplier"] = 1, -- max 10
 					["Loose Fairy Spawn Amount"] = 4, -- max 4
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
