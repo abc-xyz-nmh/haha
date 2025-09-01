@@ -34,7 +34,7 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},
     SKIP_HARVEST_MUTATIONS = {},
 
-    KEEP_PETS = {  ["Pixie"] = 8, "Glimmering Sprite", "Cockatrice", ["Imp"] = 8, ["Brown Mouse"] = 4, ["Squirrel"] = 4, ["Grey Mouse"] = 4, "Gnome", "Griffin", "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", ["Rooster"] = 5, "Green Bean", ["Golem"] = 8, "Golden Goose", "Lobster Thermidor", ["Sunny-Side Chicken"] = 10, ["Junkbot"] = 2, "French Fry Ferret", "Corrupted Kitsune", "Starfish", "Capybara", ["Seal"] = 8, "Koi", "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
+    KEEP_PETS = {  ["Pixie"] = 8, "Glimmering Sprite", "Cockatrice", ["Brown Mouse"] = 4, ["Squirrel"] = 4, ["Grey Mouse"] = 4, "Gnome", "Griffin", "Lemon Lion", "Apple Gazelle", "Peach Wasp", "Chicken Zombie", ["Rooster"] = 5, "Green Bean", ["Golem"] = 8, "Golden Goose", "Lobster Thermidor", ["Sunny-Side Chicken"] = 10, ["Junkbot"] = 2, "French Fry Ferret", "Corrupted Kitsune", "Starfish", "Capybara", ["Seal"] = 8, "Koi", "Kitsune", "Blood Kiwi", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
     KEEP_PETS_WEIGHT = 5,
 
     -- EQUIP_PETS Priority (Left -> Right)
@@ -48,9 +48,24 @@ getgenv().gagConfig = {
     SEED_WEBHOOK_URL = "", 
     NOTIFY_PETS = { "Cockatrice", "Griffin", "Golden Goose", "Lobster Thermidor", "French Fry Ferret", "Corrupted Kitsune", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Red Fox", "Spinosaurus"},
     NOTIFY_PETS_WEIGHT = 5,
-    DISCORD_ID = "",
+    DISCORD_ID = "993062998652493824",
     WEBHOOK_NOTE = "hi baby",
     SHOW_WEBHOOK_USERNAME = true,
 }
 
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/a2234a9cfbe480dfed9eaf6c00a012ca.lua"))()
+wait(10)
+-- Auto interact Fairy trong workspace["1"] -> workspace["10"]
+while true do
+    for i = 1, 10 do
+        local fairy = workspace:FindFirstChild(tostring(i))
+        if fairy then
+            local prompt = fairy:FindFirstChildWhichIsA('ProximityPrompt', true)
+            if prompt then
+                fireproximityprompt(prompt)
+                print('Đã tương tác với Fairy:', fairy.Name)
+            end
+        end
+    end
+    wait(30) -- lặp lại sau 60 giây
+end
