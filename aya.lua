@@ -225,8 +225,11 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 5, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+				["Brown Mouse"] = { 1, 100 },
+				["Squirrel"] = { 1, 100 }, 
+				["Grey Mouse"] = { 1, 100 },
 			},
-			["Limit Upgrade"] = 2, -- max is 5 (more than or lower than 1 will do nothing)
+			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
 			["Glimmering Sprite"] = { 8, 100, 1 },
 			["Capybara"] = { 1, 100 },
