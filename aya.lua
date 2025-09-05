@@ -93,6 +93,10 @@ getgenv().ConfigsKaitun = {
 				"Moon Mango",
 				"Bone Blossom",
 				"Fossilight",
+				"Sunbulb",
+				"Strawberry",
+				"Dragon Fruit",
+				"Mango",
 			}
 		}
 	},
