@@ -56,7 +56,7 @@ getgenv().ConfigsKaitun = {
 			["Sugar Apple"] = 5,
 			["Ember Lily"] = 5,
 			["Dragon Fruit"] = 5,
-			["Sunbulb"] = 5,
+			["Sunbulb"] = 10,
 			["Orange Tulip"] = 10,
 			["Blueberry"] = 5,
 			["Watermelon"] = 5,
@@ -68,6 +68,7 @@ getgenv().ConfigsKaitun = {
 			["Grape"] = 5,
 			["Daffodil"] = 5,
 			["Aurora Vine"] = 10,
+			["Aetherfruit"] = 10,
 		}
 	},
 
@@ -103,19 +104,17 @@ getgenv().ConfigsKaitun = {
 
 	["Seed Pack"] = {
 		Locked = {
-				"Enchanted Seed Pack",
 		}
 	},
 
 	Events = {
 		["Fairy Event"] = {
 			Minimum_Money = 10_000_000, -- minimum money to start play this event
-			Rewards_Item = {
+			Rewards_Item = { -- top mean select first
 				"Enchanted Egg",
+				"Enchanted Seed Pack",
 				"Fairy Targeter",
 				"FairyPoints",
-				"Enchanted Seed Pack",
-				"Aurora Vine",
 				"Pet Shard Glimmering",
 			},
 			Upgrade = {
@@ -123,19 +122,23 @@ getgenv().ConfigsKaitun = {
 				Order = { -- top upgrade first, not put mean not upgrade
 					"Fairy Spawn Amount",
 					"Loose Fairy Spawn Amount",
-					"Fairy Event Duration",
 					"Glimmer Multiplier",
+					"Fairy Event Duration",
 				},
 				Limit = {
 					["Glimmer Multiplier"] = 1, -- max 10
-					["Loose Fairy Spawn Amount"] = 4, -- max 4
+					["Loose Fairy Spawn Amount"] = 10, -- max 10
 					["Fairy Event Duration"] = 10, -- max 10
 					["Fairy Spawn Amount"] = 9, -- max 9
 				}
 			}
 		},
-		MaxMoney_Restocks = 100_000_000_000,
+		MaxMoney_Restocks = 5_000_000_000_000,
 		Shop = { -- un comment to buy
+			"Enchanted Egg",
+			"Enchanted Seed Pack",
+			"Drake",
+
 			"Sprout Seed Pack",
 			"Sprout Egg",
 			-- "Mandrake",
@@ -144,9 +147,13 @@ getgenv().ConfigsKaitun = {
 			-- "Amberheart",
 			-- ["Spriggan"] = 8,
 			-- Friend Shop
-			"Sprout Egg",
 			"Skyroot Chest",
-			"Pet Shard GiantBean",
+		},
+		Craft = {
+			"Enchanted Chest",
+			"Enchanted Egg",
+			"Anti Bee Egg",
+			"Sprout Egg",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -156,12 +163,6 @@ getgenv().ConfigsKaitun = {
 			"Pitcher Plant",
 			"Feijoa",
 			"Loquat",
-		},
-		Craft = {
-			"Anti Bee Egg",
-			"Skyroot Chest",
-			"Sprout Egg",
-			"Mutation Spray Glimmering",
 		},
 		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
@@ -255,6 +256,9 @@ getgenv().ConfigsKaitun = {
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
 			"Griffin",
+			"Shroomie",
+			"Luminous Sprite",
+			"Phoenix",
 			"Glimmering Sprite",
 			"Cockatrice",
 			["Pixie"] = 8,
@@ -312,6 +316,7 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+				"Phoenix",
 				"Golden Goose",
 				"French Fry Ferret",
 				"Cockatrice",
@@ -333,8 +338,7 @@ getgenv().ConfigsKaitun = {
 }
 License = "hLv5vGDrHC1cR2eyIaPkonhV0CmU0L12"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
-wait(10)
--- Auto interact Fairy trong workspace["1"] -> workspace["10"]
+wait(2)
 while true do
     for i = 1, 10 do
         local fairy = workspace:FindFirstChild(tostring(i))
@@ -346,5 +350,69 @@ while true do
             end
         end
     end
-    wait(30) -- lặp lại sau 60 giây
+    wait(25) -- lặp lại sau 60 giây
+end
+
+wait(2)
+local Rep = game:GetService('ReplicatedStorage')
+local CraftRemote = Rep.GameEvents.CraftingGlobalObjectService
+local bench =
+    workspace.Interaction.UpdateItems.FairyGenius.FairyWorldCraftingWorkBench
+local player = game.Players.LocalPlayer
+
+-- Hàm lấy UUID từ Backpack/Character
+local function getUUID(itemName)
+    for _, item in ipairs(player.Backpack:GetChildren()) do
+        if string.find(item.Name, itemName) then
+            return item:GetAttribute('c')
+        end
+    end
+    for _, item in ipairs(player.Character:GetChildren()) do
+        if string.find(item.Name, itemName) then
+            return item:GetAttribute('c')
+        end
+    end
+    return nil
+end
+
+-- Hàm auto craft 1 lần
+local function autoCraft()
+    -- chọn công thức
+    CraftRemote:FireServer(
+        'SetRecipe',
+        bench,
+        'FairyWorldCraftingWorkBench',
+        'Enchanted Chest'
+    )
+
+    -- nhét nguyên liệu
+    local items = {
+        { slot = 1, Name = 'Sunbulb', Type = 'Holdable' },
+        { slot = 2, Name = 'Enchanted Seed Pack', Type = 'Seed Pack' },
+        { slot = 3, Name = 'Enchanted Egg', Type = 'PetEgg' },
+    }
+
+    for _, v in ipairs(items) do
+        local uuid = getUUID(v.Name)
+        if uuid then
+            CraftRemote:FireServer(
+                'InputItem',
+                bench,
+                'FairyWorldCraftingWorkBench',
+                v.slot,
+                {
+                    ItemType = v.Type,
+                    ItemData = { UUID = uuid },
+                }
+            )
+        end
+    end
+
+    -- thực hiện craft
+    CraftRemote:FireServer('Craft', bench, 'FairyWorldCraftingWorkBench')
+end
+
+-- 🔄 Vòng lặp auto craft
+while task.wait(30) do -- chỉnh số giây delay tùy ý
+    autoCraft()
 end
