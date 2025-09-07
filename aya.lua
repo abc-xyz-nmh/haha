@@ -168,8 +168,10 @@ getgenv().ConfigsKaitun = {
 
 	Gear = {
 		Buy = { 
+			"Harvest Tool",
 			"Master Sprinkler",
 			"Godly Sprinkler",
+			"Grandmaster Sprinkler",
 			"Advanced Sprinkler",
 			"Basic Sprinkler",
 			"Lightning Rod",
@@ -178,11 +180,13 @@ getgenv().ConfigsKaitun = {
 			"Medium Toy",
 		},
 		Lock = {
-			"Master Sprinkler",
+			"Grandmaster Sprinkler",
 			"Godly Sprinkler",
-			"Advanced Sprinkler",
-			"Basic Sprinkler",
 			"Lightning Rod",
+			"Harvest Tool",
+			"Level Up Lollipop",
+			"Medium Treat",
+			"Medium Toy",
 		},
 	},
 
