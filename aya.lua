@@ -489,15 +489,131 @@ local function craftChest()
     CraftRemote:FireServer("Craft", bench, "FairyWorldCraftingWorkBench")
 end
 
--- 🔄 Main loop
-while task.wait(60) do
-    -- Thu hoạch Sunbulb mỗi vòng
-    harvestSunbulb(LIMIT)
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local hrp = char:WaitForChild('HumanoidRootPart')
 
-    -- Craft theo logic
-    if countItem("Enchanted Seed Pack") < 1 then
-        craftSeedPack()
-    else
-        craftChest()
+local Rep = game:GetService('ReplicatedStorage')
+local Events = Rep:WaitForChild('GameEvents')
+local FairyEventVisuals = require(Rep.Modules.FairyEventVisualsController)
+local FairyNetEvent = Events:WaitForChild('FairyNetActivated')
+
+-- Hàm auto equip item theo keyword
+local function equipItemContains(keyword)
+    for _, tool in ipairs(player.Character:GetChildren()) do
+        if tool:IsA('Tool') and string.find(tool.Name, keyword) then
+            return tool
+        end
+    end
+    for _, tool in ipairs(player.Backpack:GetChildren()) do
+        if tool:IsA('Tool') and string.find(tool.Name, keyword) then
+            tool.Parent = player.Character
+            return tool
+        end
+    end
+    return nil
+end
+
+-- Hàm collect fairy gần HRP
+local function collectNearbyFairies()
+    local fairies = FairyEventVisuals:GetAllFairies()
+    local nearby = {}
+
+    for _, fairy in ipairs(fairies) do
+        if (fairy.Position - hrp.Position).Magnitude <= 10 then
+            table.insert(nearby, fairy.Id)
+        end
+        if #nearby >= 3 then
+            break
+        end
+    end
+
+    if #nearby > 0 then
+        local net = equipItemContains('Fairy Net')
+        if net then
+            FairyNetEvent:FireServer(nearby)
+            local sound = net:FindFirstChild('CollectSound')
+            if sound then
+                sound:Play()
+            end
+        end
     end
 end
+
+-- Task 1: Fake teleport tới folder 1 → 10 và collect fairy
+task.spawn(function()
+    while task.wait(1) do
+        if equipItemContains('Fairy Net') then
+            for i = 1, 10 do
+                local folder = workspace:FindFirstChild(tostring(i))
+                if folder then
+                    for _, obj in ipairs(folder:GetChildren()) do
+                        local objCF
+                        if obj:IsA('Model') and obj.PrimaryPart then
+                            objCF = obj:GetPivot()
+                        elseif obj:IsA('Part') then
+                            objCF = obj.CFrame
+                        end
+
+                        if objCF then
+                            local objPos = objCF.Position
+                            local forward = objCF.LookVector * 6
+                            local targetPos = objPos
+                                + forward
+                                + Vector3.new(0, 7, 0)
+                            hrp.CFrame = CFrame.new(targetPos, objPos)
+
+                            workspace.CurrentCamera.CFrame = CFrame.new(
+                                objPos + Vector3.new(0, 10, 15),
+                                objPos
+                            )
+
+                            collectNearbyFairies()
+                            task.wait(0.5)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end)
+
+-- Task 2: Fake teleport tới RewardPoint 1 → 20
+task.spawn(function()
+    while task.wait(1) do
+        for i = 1, 20 do
+            local point = workspace:FindFirstChild('RewardPoint' .. i)
+            if point and point:IsA('Part') then
+                local objPos = point.Position
+                local targetPos = objPos + Vector3.new(0, 3, 0)
+                hrp.CFrame = CFrame.new(targetPos)
+
+                workspace.CurrentCamera.CFrame =
+                    CFrame.new(objPos + Vector3.new(0, 10, 15), objPos)
+
+                local attach = point:FindFirstChild('Attachment')
+                if attach then
+                    local prompt =
+                        attach:FindFirstChildOfClass('ProximityPrompt')
+                    if prompt then
+                        fireproximityprompt(prompt)
+                    end
+                end
+
+                task.wait(0.5)
+            end
+        end
+    end
+end)
+
+-- Task 3: Spam lệnh mỗi 60s (giữ lại print)
+task.spawn(function()
+    while task.wait(60) do
+        Events.FairyService.FairySubmitAllJar:FireServer()
+        print('📦 FairySubmitAllJar đã gửi!')
+
+        local args = { 'Enchanted Chest', 2 }
+        Events.BuyEventShopStock:FireServer(unpack(args))
+        print('💎 Đã mua Enchanted Chest x2!')
+    end
+end)
