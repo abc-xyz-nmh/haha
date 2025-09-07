@@ -261,7 +261,7 @@ getgenv().ConfigsKaitun = {
 		Locked = {
 			"Griffin",
 			"Wisp",
-			"Shroomie",
+			["Shroomie"] = 8,
 			"Luminous Sprite",
 			"Phoenix",
 			"Glimmering Sprite",
@@ -542,23 +542,6 @@ local function harvestGlimmering(limit)
         end
     end
 end
-
--- 🧚 Auto interact Fairy (1 -> 10)
-task.spawn(function()
-    while true do
-        for i = 1, 10 do
-            local fairy = workspace:FindFirstChild(tostring(i))
-            if fairy then
-                local prompt =
-                    fairy:FindFirstChildWhichIsA('ProximityPrompt', true)
-                if prompt then
-                    fireproximityprompt(prompt)
-                end
-            end
-        end
-        task.wait(30)
-    end
-end)
 
 -- 🔄 Main loop
 while task.wait(INTERVAL) do
