@@ -94,10 +94,6 @@ getgenv().ConfigsKaitun = {
 				"Moon Mango",
 				"Bone Blossom",
 				"Fossilight",
-				"Sunbulb",
-				"Strawberry",
-				"Dragon Fruit",
-				"Mango",
 			}
 		}
 	},
@@ -152,6 +148,7 @@ getgenv().ConfigsKaitun = {
 			"Skyroot Chest",
 		},
 		Craft = {
+			"Fairy Net",
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Anti Bee Egg",
