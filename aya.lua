@@ -111,9 +111,9 @@ getgenv().ConfigsKaitun = {
 			Rewards_Item = { -- top mean select first
 				"Enchanted Egg",
 				"Enchanted Seed Pack",
-				"Fairy Targeter",
 				"FairyPoints",
 				"Pet Shard Glimmering",
+			    "Fairy Targeter",
 			},
 			Upgrade = {
 				Mode = "Order", -- Order (mean will up on order), Chepest, Highest
