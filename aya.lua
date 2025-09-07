@@ -138,6 +138,7 @@ getgenv().ConfigsKaitun = {
 			"Enchanted Seed Pack",
 			"Drake",
 			"Wisp",
+			"Luminous Sprite",
 
 			"Sprout Seed Pack",
 			"Sprout Egg",
@@ -263,7 +264,7 @@ getgenv().ConfigsKaitun = {
 			["Shroomie"] = 8,
 			"Luminous Sprite",
 			"Phoenix",
-			"Glimmering Sprite",
+			["Glimmering Sprite"] = 8,
 			"Cockatrice",
 			["Pixie"] = 8,
 			"Drake",
