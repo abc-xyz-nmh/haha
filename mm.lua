@@ -21,7 +21,7 @@ getgenv().gagConfig = {
     ["Sunbulb"] = 10, ["Orange Tulip"] = 10, ["Blueberry"] = 5,
     ["Watermelon"] = 5, ["Mango"] = 5, ["Cactus"] = 5, ["Strawberry"] = 5,
     ["Beanstalk"] = 10, ["Lightshoot"] = 5, ["Grape"] = 5, ["Daffodil"] = 5,
-    ["Aurora Vine"] = 10, ["Aetherfruit"] = 10, }
+    ["Aurora Vine"] = 10, ["Aetherfruit"] = 10 },
 
     -- General:
     AUTO_UPDATE_RESTART = false,
