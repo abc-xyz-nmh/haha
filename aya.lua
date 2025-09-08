@@ -349,6 +349,9 @@ getgenv().ConfigsKaitun = {
 }
 License = "hLv5vGDrHC1cR2eyIaPkonhV0CmU0L12"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+
+
+wait(4)
 -- 🌟 Auto Fairy Event Script (Modified)
 local Players = game:GetService('Players')
 local Rep = game:GetService('ReplicatedStorage')
