@@ -154,12 +154,14 @@ getgenv().ConfigsKaitun = {
 			"Skyroot Chest",
 		},
 		Craft = {
-			"Fairy Net",
+			"Fairy Summoner",
+			"Fairy Power Extender",
+			"Fairy Caller",
 			"Enchanted Chest",
 			"Enchanted Egg",
-			"Mutation Spray Glimmering",
 			"Anti Bee Egg",
 			"Sprout Egg",
+			"Fairy Net",
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
