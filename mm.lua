@@ -3,7 +3,7 @@ setfpscap(2)
 
 getgenv().gagConfig = {
     -- Event:
-    CRAFT_EVENT = { "Enchanted Chest", "Fairy Net", "Anti Bee Egg", "Enchanted Egg", "Mutation Spray Glimmering" },
+    CRAFT_EVENT = { "Enchanted Chest", "Fairy Net", "Anti Bee Egg", "Mutation Spray Glimmering" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Primal Egg", "Paradise Egg", "Rare Summer Egg", "Common Summer Egg" },
     MAX_EVENT_RESTOCK_SHECKLES = 5_000_000_000_000,
     BUY_EVENT_SHOP = { "Enchanted Chest", "Luminous Sprite", "Drake", "Enchanted Egg", "Enchanted Seed Pack", "Wisp" },
