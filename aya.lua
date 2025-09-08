@@ -24,8 +24,8 @@ getgenv().ConfigsKaitun = {
 	},
 
 	["Limit Tree"] = {
-		["Limit"] = 250,
-		["Destroy Until"] = 250,
+		["Limit"] = 345,
+		["Destroy Until"] = 321,
 
 		["Safe Tree"] = {
 	"Moon Blossom",
@@ -112,6 +112,7 @@ getgenv().ConfigsKaitun = {
 				"Enchanted Egg",
 				"Enchanted Seed Pack",
 				"FairyPoints",
+				"Mutation Spray Glimmering",
 				"Pet Shard Glimmering",
 			    "Fairy Targeter",
 			},
@@ -136,6 +137,7 @@ getgenv().ConfigsKaitun = {
 			"Enchanted Chest",
 			"Enchanted Egg",
 			"Enchanted Seed Pack",
+			"Mutation Spray Glimmering",
 			"Drake",
 			"Wisp",
 			"Luminous Sprite",
@@ -154,6 +156,7 @@ getgenv().ConfigsKaitun = {
 			"Fairy Net",
 			"Enchanted Chest",
 			"Enchanted Egg",
+			"Mutation Spray Glimmering",
 			"Anti Bee Egg",
 			"Sprout Egg",
 		},
