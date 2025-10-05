@@ -32,8 +32,8 @@ getgenv().ConfigsKaitun = {
 	},
 
 	["Limit Tree"] = {
-		["Limit"] = 400,
-		["Destroy Until"] = 400,
+		["Limit"] = 300,
+		["Destroy Until"] = 275,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -180,6 +180,7 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Fall Egg",
 			"Jungle Egg",
 			"Anti Bee Egg",
 			"Bug Egg",
@@ -231,6 +232,7 @@ getgenv().ConfigsKaitun = {
 		Locked = {
 			["Chubby Chipmunk"] = 8,
 			"Chinchilla",
+			"Silver Dragonfly",
 			"Mizuchi",
 			"Tiger",
 			"Swan",
