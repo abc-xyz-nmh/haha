@@ -32,8 +32,8 @@ getgenv().ConfigsKaitun = {
 	},
 
 	["Limit Tree"] = {
-		["Limit"] = 400,
-		["Destroy Until"] = 400,
+		["Limit"] = 300,
+		["Destroy Until"] = 275,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -46,23 +46,42 @@ getgenv().ConfigsKaitun = {
 			"Fossilight",
 			"Princess Thorn",
 			-- for the event
-			["Evo Beetroot"] = 20,
-			["Evo Blueberry"] = 20,
-			["Evo Pumpkin"] = 20,
-			["Evo Mushroom"] = 20,
-			["Evo Beetroot I"] = 20,
-			["Evo Blueberry I"] = 20,
-			["Evo Pumpkin I"] = 20,
-			["Evo Mushroom I"] = 20,
-			["Evo Beetroot II"] = 20,
-			["Evo Blueberry II"] = 20,
-			["Evo Pumpkin II"] = 20,
-			["Evo Mushroom II"] = 20,
-			["Evo Beetroot III"] = 20,
-			["Evo Blueberry III"] = 20,
-			["Evo Pumpkin III"] = 20,
-			["Evo Mushroom III"] = 20,
+			["Coconut"] = 10,
+			["Mushroom"] = 10,
+			["Glowthorn"] = 10,
+			["Pepper"] = 10,
+			["Cacao"] = 10,
+			["Apple"] = 10,
+			["Wispwing"] = 10,
+			["Romanesco"] = 10,
+			["Elder Strawberry"] = 10,
+			["Burning Bud"] = 10,
+			["Giant Pinecone"] = 10,
+			["Corn"] = 10,
+			["Sugar Apple"] = 10,
+			["Ember Lily"] = 10,
+			["Dragon Fruit"] = 10,
+			["Sunbulb"] = 10,
+			["Orange Tulip"] = 10,
+			["Mango"] = 10,
+			["Cactus"] = 10,
+			["Beanstalk"] = 10,
+			["Lightshoot"] = 10,
+			["Grape"] = 10,
+			["Daffodil"] = 10,
+			["Aurora Vine"] = 10,
+			["Grand Tomato"] = 10,
+			["Maple Apple"] = 10,
+			["Princess Thorn"] = 10,
+			["Spiked Mango"] = 10,
+			["Pineapple"] = 10,
+			["King Cabbage"] = 10,
+			["Carnival Pumpkin"] = 10,
+			["Kniphofia"] = 10,
+			["Golden Peach"] = 10,
+			["Crimson Thorn"] = 20,
 			["Maple Resin"] = 50,
+			"Great Pumpkin"
 		}
 	},
 
@@ -102,10 +121,7 @@ getgenv().ConfigsKaitun = {
 		-- MaxMoney_Restocks = 10_000_000,
 		
 		Shop = { -- un comment to buy
-			"Evo Beetroot I",
-			"Evo Blueberry I",
-			"Evo Pumpkin I",
-			"Evo Mushroom I",
+			"Spooky Egg"
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -136,24 +152,20 @@ getgenv().ConfigsKaitun = {
 			"Harvest Tool",
 		},
 		Lock = {
-			"Master Sprinkler",
-			"Godly Sprinkler",
-			"Advanced Sprinkler",
-			"Basic Sprinkler",
-			"Lightning Rod",
 		},
 	},
 
 	Eggs = {
 		Place = {
+			"Spooky Egg",
 			"Jungle Egg",
 			"Anti Bee Egg",
 			"Bug Egg",
 			"Paradise Egg",
-			"Bee Egg",
 			"Rare Egg",
 		},
 		Buy = {
+			"Spooky Egg",
 			"Jungle Egg",
 			"Bee Egg",
 			"Rare Egg",
@@ -186,17 +198,21 @@ getgenv().ConfigsKaitun = {
 			["Equip When Done"] = {
 				["Wasp"] = { 1, 100, 1 },
 				["Tarantula Hawk"] = { 1, 100, 2 },
-				["Barn Owl"] = { 1, 100, 4 },
-                ["Sunny-Side Chicken"] = { 5, 100, 3 },
+				["Barn Owl"] = { 1, 100, 3 },
+                ["Sunny-Side Chicken"] = { 5, 100, 4 },
                 ["Rooster"] = { 4, 100, 5 },
-				"Bear Bee",
-			 	"Petal Bee",
 			},
 		},
 		Unfavorite_AllPet = false,
 		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
+			"Chinchilla",
+			["Chubby Chipmunk"] = 4,
+			"Headless Horseman",
+			"Reaper",
+			["Black Cat"] =2,
+			"Silver Dragonfly",
 			"Mizuchi",
 			"Tiger",
 			"Swan",
@@ -258,7 +274,7 @@ getgenv().ConfigsKaitun = {
 		UrlSeed = "xxx",
 		PcName = "abc",
 
-		Mention = "473755357274046464", -- discord id
+		Mention = "993062998652493824", -- discord id
 
 		Noti = {
 			Seeds = {
@@ -270,6 +286,8 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+			    "Headless Horseman",				
+				"Chinchilla",
 				"Tiger",
 				"Mizuchi",
 				"Silver Dragonfly",
