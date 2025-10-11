@@ -1,318 +1,301 @@
-getgenv().ConfigsKaitun = {
-	Beta_Fix_Data_Sync = true,
+getgenv().RunningFarm = true
+-- ===============================
+-- 🌟 CONFIG CHUNG (bạn chỉnh tại đây)
+-- ===============================
+getgenv().Config = {
+    LoopInterval = 0.1, -- giây: mỗi vòng lặp tổng
 
-	NoDeletePlayer = false,
+    -- Trồng cây
+    Plant_Seeds = { -- target số lượng cây trong farm
+        ['Meyer Lemon'] = 10,
+        ['Carnival Pumpkin'] = 10,
+        ['Kniphofia'] = 10,
+        ['Golden Peach'] = 10,
+        ['Moon Blossom'] = 10,
+        ['Bone Blossom'] = 10,
+        ['Moon Melon'] = 10,
+        ['Maple Apple'] = 10,
+        ['Moon Mango'] = 10,
+        ['Dragon Pepper'] = 10,
+        ['Elephant Ears'] = 10,
+        ['Fossilight'] = 10,
+        ['Princess Thorn'] = 10,
+        ['Coconut'] = 10,
+        ['Mushroom'] = 10,
+        ['Glowthorn'] = 10,
+        ['Pepper'] = 10,
+        ['Cacao'] = 10,
+        ['Apple'] = 10,
+        ['Wispwing'] = 10,
+        ['Romanesco'] = 10,
+        ['Elder Strawberry'] = 10,
+        ['Burning Bud'] = 10,
+        ['Giant Pinecone'] = 10,
+        ['Corn'] = 10,
+        ['Sugar Apple'] = 10,
+        ['Ember Lily'] = 10,
+        ['Dragon Fruit'] = 10,
+        ['Sunbulb'] = 10,
+        ['Orange Tulip'] = 10,
+        ['Mango'] = 10,
+        ['Cactus'] = 10,
+        ['Beanstalk'] = 10,
+        ['Lightshoot'] = 10,
+        ['Grape'] = 10,
+        ['Daffodil'] = 10,
+        ['Aurora Vine'] = 10,
+        ['Grand Tomato'] = 10,
+        ['Maple Apple'] = 10,
+        ['Princess Thorn'] = 10,
+        ['Spiked Mango'] = 10,
+        ['Pineapple'] = 10,
+        ['King Cabbage'] = 10,
+        ['Carnival Pumpkin'] = 10,
+        ['Kniphofia'] = 10,
+        ['Golden Peach'] = 10,
+        ['Maple Resin'] = 50,
+		'Great Pumpkin',
+    },
 
-	["Block Pet Gift"] = true,
+    -- Vòi phun (đặt theo thứ tự ưu tiên, mặc định đặt ở bên phải)
+    Sprinklers = {
+        'Basic Sprinkler',
+        'Advanced Sprinkler',
+        'Master Sprinkler',
+        'Grandmaster Sprinkler',
+        'Godly Sprinkler',
+    },
 
-	Collect_Cooldown = 90, -- cooldown to collect fruit
+    -- Fruit
+    skipFruit = { 'Weed', 'StoneFruit' }, -- bỏ qua tên fruit
+    skipMutation = { 'Glimmering', 'Golden' }, -- bỏ qua mutation
 
-	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
+    -- Eggs (đặt & nở + ưu tiên khi thiếu pet)
+    EggsPlant = {
+        { Name = 'Spooky Egg', Amount = 8 },
+        { Name = 'Rare Summer Egg', Amount = 2 },
+    },
+    PetNeedsPlant = { -- ví dụ: nếu Rooster < 9 thì ưu tiên Rare Egg
+        ['Rooster<5'] = 'Rare Egg',
+    },
+    AutoHatch = true,
+    PlaceDelay = 0.25,
+    HatchDelay = 0.25,
 
-	["Rejoin When Update"] = true,
+    -- Bán pet
+    PetNoSell = {
+        'Headless Horseman',
+        ['Black Cat'] = 2,
+        'Reaper',
+        'Fortune Squirrel',
+        'Moth',
+        'Wasp',
+        'Tarantula Hawk',
+        'Chubby Chipmunk',
+        'Chinchilla',
+        'Tiger',
+        'Red Panda',
+        'Griffin',
+        'Space Squirrel',
+        'Barn Owl',
+        'Swan',
+        'Wisp',
+        ['Shroomie'] = 8,
+        'Luminous Sprite',
+        'Phoenix',
+        'Cockatrice',
+        'Drake',
+        'Gnome',
+        'Green Bean',
+        'Apple Gazelle',
+        'Lemon Lion',
+        'Peach Wasp',
+        'Golden Goose',
+        'French Fry Ferret',
+        'Corrupted Kitsune',
+        'Raiju',
+        'Koi',
+        'Kitsune',
+        'Dilophosaurus',
+        'Moon Cat',
+        'Capybara',
+        'Chicken Zombie',
+        ['Sunny-Side Chicken'] = 8,
+        ['Rooster'] = 10,
+        'Spinosaurus',
+        ['Brown Mouse'] = 5,
+        ['Squirrel'] = 5,
+        ['Grey Mouse'] = 5,
+        'Bear Bee',
+        'T-Rex',
+        'Brontosaurus',
+        'Disco Bee',
+        'Butterfly',
+        'Queen Bee',
+        'Dragonfly',
+        'Raccoon',
+        'Fennec Fox',
+        'Mimic Octopus',
+        'Red Fox',
+        'Blood Owl',
+        ['Seal'] = 8,
+        ['Starfish'] = 8,
+    },
+    WeightLimit = 7, -- kg
 
-	["Auto Trade Pet"] = { -- beta idk it work or no
-		["Enabled"] = false, 
-		["Target"] =  { -- multi users
-			"username1",
-			"username2",
-		},
-		["Pet To Send"] = {
-			
-		}
-	},
+    -- Cho pet ăn
+    HungerThreshold = 0, -- dưới ngưỡng này sẽ cho ăn
 
-	Ascend = {
-		Enabled = false,
-		Max_Rebirth_Money = 1_000_000_000_000,
-		Shop = {
-			"Egg Capacity"
-		}
-	},
+    -- Equip pet
+    PetUpLv = { ['Chubby Chipmunk'] = 2 },
+    PetPrioritize = { ['Rooster'] = 5, ['Tarantula Hawk'] = 1, ['Wasp'] = 1 },
+    PetRandom = { ['Wisp'] = 2 },
 
-	["Limit Tree"] = {
-		["Limit"] = 300,
-		["Destroy Until"] = 275,
+    -- AutoBuy (chạy 1 pass / vòng)
+    AutoBuy = {
+        Seeds = {
+            ['Carrot'] = 10,
+            ['Strawberry'] = 10,
+            ['Blueberry'] = 10,
+            ['Orange Tulip'] = 10,
+            ['Tomato'] = 10,
+            ['Corn'] = 10,
+            ['Daffodil'] = 10,
+            ['Cauliflower'] = 10,
+            ['Watermelon'] = 10,
+            ['Rafflesia'] = 10,
+            ['Green Apple'] = 10,
+            ['Avocado'] = 10,
+            ['Banana'] = 10,
+            ['Pineapple'] = 10,
+            ['Kiwi'] = 10,
+            ['Bell Pepper'] = 10,
+            ['Prickly Pear'] = 10,
+            ['Loquat'] = 10,
+            ['Feijoa'] = 10,
+            ['Pitcher Plant'] = 10,
+            ['Pumpkin'] = 10,
+            ['Apple'] = 10,
+            ['Bamboo'] = 10,
+            ['Coconut'] = 10,
+            ['Cactus'] = 10,
+            ['Dragon Fruit'] = 10,
+            ['Mango'] = 10,
+            ['Grape'] = 10,
+            ['Mushroom'] = 10,
+            ['Pepper'] = 10,
+            ['Cacao'] = 10,
+            ['Beanstalk'] = 10,
+            ['Ember Lily'] = 10,
+            ['Sugar Apple'] = 10,
+            ['Burning Bud'] = 10,
+            ['Giant Pinecone'] = 10,
+            ['Elder Strawberry'] = 10,
+            ['Romanesco'] = 10,
+        },
+        Gears = {
+            ['Watering Can'] = 2,
+            'Trading Ticket',
+            'Trowel',
+            ['Basic Sprinkler'] = 1,
+            'Advanced Sprinkler',
+            'Godly Sprinkler',
+            'Master Sprinkler',
+            'Grandmaster Sprinkler',
+            'Recall Wrench',
+            'Magnifying Glass',
+            'Favorite Tool',
+            'Harvest Tool',
+            'Friendship Pot',
+            'Medium Toy',
+            'Medium Treat',
+            'Cleaning Spray',
+            'Cleansing Pet Shard',
+            'Levelup Lollipop',
+        },
+        Eggs = {
+            ['Common Egg'] = 5,
+            ['Uncommon Egg'] = 10,
+            'Rare Egg',
+            'Legendary Egg',
+            'Mythical Egg',
+            'Bug Egg',
+        },
+        EventShop = {
+            ['Turnip'] = 1,
+            ['Fall Seed Pack'] = 1,
+            ['Parsley'] = 1,
+            ['Meyer Lemon'] = 1,
+            ['Carnival Pumpkin'] = 1,
+            ['Kniphofia'] = 1,
+            ['Golden Peach'] = 1,
+            ['Maple Resin'] = 1,
 
-		["Safe Tree"] = {
-			"Moon Blossom",
-			"Bone Blossom",
-			"Moon Melon",
-			"Maple Apple",
-			"Moon Mango",
-			"Dragon Pepper",
-			"Elephant Ears",
-			"Fossilight",
-			"Princess Thorn",
-			-- for the event
-			["Coconut"] = 10,
-			["Mushroom"] = 10,
-			["Glowthorn"] = 10,
-			["Pepper"] = 10,
-			["Cacao"] = 10,
-			["Apple"] = 10,
-			["Wispwing"] = 10,
-			["Romanesco"] = 10,
-			["Elder Strawberry"] = 10,
-			["Burning Bud"] = 10,
-			["Giant Pinecone"] = 10,
-			["Corn"] = 10,
-			["Sugar Apple"] = 10,
-			["Ember Lily"] = 10,
-			["Dragon Fruit"] = 10,
-			["Sunbulb"] = 10,
-			["Orange Tulip"] = 10,
-			["Mango"] = 10,
-			["Cactus"] = 10,
-			["Beanstalk"] = 10,
-			["Lightshoot"] = 10,
-			["Grape"] = 10,
-			["Daffodil"] = 10,
-			["Aurora Vine"] = 10,
-			["Grand Tomato"] = 10,
-			["Maple Apple"] = 10,
-			["Princess Thorn"] = 10,
-			["Spiked Mango"] = 10,
-			["Pineapple"] = 10,
-			["King Cabbage"] = 10,
-			["Carnival Pumpkin"] = 10,
-			["Kniphofia"] = 10,
-			["Golden Peach"] = 10,
-			["Crimson Thorn"] = 20,
-			["Maple Resin"] = 50,
-			"Great Pumpkin"
-		}
-	},
+            -- ⚙️ Gear
+            ['Firefly Jar'] = 1,
+            ['Sky Lantern'] = 1,
+            ['Maple Leaf Kite'] = 1,
+            ['Leaf Blower'] = 1,
+            ['Maple Syrup'] = 1,
+            ['Maple Sprinkler'] = 1,
+            ['Bonfire'] = 1,
+            ['Harvest Basket'] = 1,
+            ['Maple Leaf Charm'] = 1,
+            ['Golden Acorn'] = 1,
+            ['Rake'] = 1,
+            ['Acorn Bell'] = 1,
+            ['Acorn Lollipop'] = 1,
+            ['Super Leaf Blower'] = 1,
 
-	Seed = {
-		Buy = {
-			Mode = "Auto", -- Custom , Auto
-			Custom = { -- any seed u need to buy
-				"Carrot",
-			}
-		},
-		Place = {
-			Mode = "Lock", -- Select , Lock
-			Select = {
-				"Carrot"
-			},
-			Lock = {
-				"Maple Apple",
-				"Sunflower",
-				"Dragon Pepper",
-				"Elephant Ears",
-				"Moon Melon",
-				"Easter Egg",
-				"Moon Mango",
-				"Bone Blossom",
-				"Fossilight",
-			}
-		}
-	},
+            -- 🐾 Pets & Eggs
+            ['Fall Egg'] = 1,
+            ['Chipmunk'] = 1,
+            ['Red Squirrel'] = 1,
+            ['Salmon'] = 1,
+            ['Marmot'] = 1,
+            ['Sugar Glider'] = 1,
+            ['Woodpecker'] = 1,
+            ['Space Squirrel'] = 1,
+            ['Mallard'] = 1,
+            ['Red Panda'] = 1,
 
-	["Seed Pack"] = {
-		Locked = {
-			["Enchanted Seed Pack"] = 10,
-		}
-	},
+            -- 📦 Crates & Cosmetics
+            ['Fall Crate'] = 1,
+            ['Maple Crate'] = 1,
+            ['Fall Leaf Chair'] = 1,
+            ['Maple Flag'] = 1,
+            ['Fall Wreath'] = 1,
+            ['Fall Hay Bale'] = 1,
+            ['Pile Of Leaves'] = 1,
+            ['Flying Kite'] = 1,
+            ['Fall Fountain'] = 1,
+        },
+    },
 
-	Events = {
-		-- MaxMoney_Restocks = 10_000_000,
-		
-		Shop = { -- un comment to buy
-			"Spooky Egg"
-		},
-		["Traveling Shop"] = {
-			"Bee Egg",
-			"Paradise Egg", 
-			"Rare Summer Egg", 
-			"Common Summer Egg"
-		},
-		Craft = {
-			"Anti Bee Egg",
-			"Enchanted Chest",
-			"Enchanted Egg",
-			"Pet Shard GiantBean",
-			"Sprout Egg",
-		},
-		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
-	},
+    -- Phá cây
+    MaxPlants = 300,
+    BreakList = { 'Carrot' },
 
-	Gear = {
-		Buy = { 
-			"Master Sprinkler",
-			"Godly Sprinkler",
-			"Advanced Sprinkler",
-			"Basic Sprinkler",
-			"Lightning Rod",
-			"Level Up Lollipop",
-			"Medium Treat",
-			"Medium Toy",
-			"Harvest Tool",
-		},
-		Lock = {
-		},
-	},
-
-	Eggs = {
-		Place = {
-			"Spooky Egg",
-			"Jungle Egg",
-			"Anti Bee Egg",
-			"Bug Egg",
-			"Paradise Egg",
-			"Rare Egg",
-		},
-		Buy = {
-			"Spooky Egg",
-			"Jungle Egg",
-			"Bee Egg",
-			"Rare Egg",
-			"Oasis Egg",
-			"Paradise Egg",
-			"Anti Bee Egg",
-			"Night Egg",
-			"Rare Summer Egg",
-			"Bug Egg",
-			"Mythical Egg",
-			"Uncommon Egg",
-			"Common Egg",
-		}
-	},
-
-	Pets = {
-		["Auto Feed"] = true,
-
-		MutationPet = {
-			["PET NAME"] = { "Glimmering","... any other" }
-		},
-
-		["Start Delete Pet At"] = 50,
-		["Upgrade Slot"] = {
-			["Pet"] = {
-				["Starfish"] = { 1, 100, 7 , true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
-				["Capybara"] = { 1, 100, 6 , true },
-			},
-			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
-			["Equip When Done"] = {
-				["Wasp"] = { 1, 100, 1 },
-				["Tarantula Hawk"] = { 1, 100, 2 },
-				["Barn Owl"] = { 1, 100, 3 },
-                ["Sunny-Side Chicken"] = { 5, 100, 4 },
-                ["Rooster"] = { 4, 100, 5 },
-			},
-		},
-		Unfavorite_AllPet = false,
-		Favorite_LockedPet = false,
-		Locked_Pet_Age = 60, -- pet that age > 60 will lock
-		Locked = {
-			"Chinchilla",
-			["Chubby Chipmunk"] = 4,
-			"Headless Horseman",
-			"Reaper",
-			["Black Cat"] =2,
-			"Silver Dragonfly",
-			"Mizuchi",
-			"Tiger",
-			"Swan",
-			"Red Panda",
-			"Space Squirrel",
-			"Barn Owl",
-			"Phoenix",
-			["Drake"] = 2,
-			["Luminous Sprite"] = 2,
-			"Griffin",
-			"Cockatrice",
-			"Golem",
-			"Gnome",
-			"Green Bean", 
-			"Apple Gazelle", 
-			"Lemon Lion", 
-			"Peach Wasp",
-			"Golden Goose",
-			"Junkbot",
-			"Hotdog Daschund",
-			"Sunny-Side Chicken",
-			"Lobster Thermidor",
-			"French Fry Ferret",
-			"Raiju",
-			"Corrupted Kodama",
-			["Rooster"] = 4,
-			"Capybara",
-			["Koi"] = 2,
-			"Kitsune",
-			"Corrupted Kitsune",
-			"Dilophosaurus",
-			"Spinosaurus",
-			"Brontosaurus",
-			"T-Rex",
-			"Fennec Fox",
-			"Blood Kiwi",
-			"Hamster",
-			"Disco Bee",
-			"Raccoon",
-			"Queen Bee",
-			"Dragonfly",
-			"Butterfly",
-			"Tarantula Hawk",
-			"Wasp",
-			"Honey Bee",
-			"Bee",
-			"Mimic Octopus",
-			"Red Fox",
-			"Chicken Zombie"
-		},
-		LockPet_Weight = 5, -- if Weight >= 10 they will locked
-		Ignore_Pet_Weight = {
-		},
-		Instant_Sell = {
-		}
-	},
-	Webhook = {
-		UrlPet = "https://discord.com/api/webhooks/1394039615949639822/ru1nhLaHQ0YheuaUN238iKf337NATfBXg224aTMSInFTWhNg24i7aPpFSIy6NAUAfr3r",
-		UrlSeed = "xxx",
-		PcName = "abc",
-
-		Mention = "993062998652493824", -- discord id
-
-		Noti = {
-			Seeds = {
-				"Sunflower",
-				"Dragon Pepper",
-				"Elephant Ears",
-			},
-			SeedPack = {
-				"Idk"
-			},
-			Pets = {
-			    "Headless Horseman",				
-				"Chinchilla",
-				"Tiger",
-				"Mizuchi",
-				"Silver Dragonfly",
-				"Space Squirrel",
-				"Swan",
-				"Phoenix",
-				"Golden Goose",
-				"French Fry Ferret",
-				"Cockatrice",
-				"Kitsune",
-				"Spinosaurus",
-				"T-Rex",
-				"Disco Bee",
-				"Butterfly",
-				"Mimic Octopus",
-				"Queen Bee",
-				"Fennec Fox",
-				"Dragonfly",
-				"Raccoon",
-				"Red Fox",
-			},
-			Pet_Weight_Noti = true,
-		}
-	},
+    -- Webhook (tùy chọn)
+    WebhookUrl = 'https://discord.com/api/webhooks/1367210306904002630/8gxmUF7Z5nQqSEtprqYz_VwWndHIf8n-bJb1a8u7ONVu6y7bXuUs24YFxhdkNr40gn_A',
+    SendAllPets = false,
+    PetFilter = {
+        'Swan',
+        'Phoenix',
+        'Golden Goose',
+        'French Fry Ferret',
+        'Cockatrice',
+        'Kitsune',
+        'Spinosaurus',
+        'T-Rex',
+        'Disco Bee',
+        'Butterfly',
+        'Mimic Octopus',
+        'Queen Bee',
+        'Fennec Fox',
+        'Dragonfly',
+        'Raccoon',
+        'Red Fox',
+    },
 }
-License = "8xGBxxJlHuPLdS1c2sW50enfE4WzHG6W"
-
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Manhtuan24112001/changeracc/refs/heads/main/bebe"))()
