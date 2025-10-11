@@ -80,23 +80,8 @@ getgenv().ConfigsKaitun = {
 			["Kniphofia"] = 10,
 			["Golden Peach"] = 10,
 			["Crimson Thorn"] = 20,
-			["Evo Beetroot"] = 20,
-			["Evo Blueberry"] = 20,
-			["Evo Pumpkin"] = 20,
-			["Evo Mushroom"] = 20,
-			["Evo Beetroot I"] = 20,
-			["Evo Blueberry I"] = 20,
-			["Evo Pumpkin I"] = 20,
-			["Evo Mushroom I"] = 20,
-			["Evo Beetroot II"] = 20,
-			["Evo Blueberry II"] = 20,
-			["Evo Pumpkin II"] = 20,
-			["Evo Mushroom II"] = 20,
-			["Evo Beetroot III"] = 20,
-			["Evo Blueberry III"] = 20,
-			["Evo Pumpkin III"] = 20,
-			["Evo Mushroom III"] = 20,
 			["Maple Resin"] = 50,
+			"Great Pumpkin"
 		}
 	},
 
@@ -136,10 +121,10 @@ getgenv().ConfigsKaitun = {
 		-- MaxMoney_Restocks = 10_000_000,
 		
 		Shop = { -- un comment to buy
-			"Evo Beetroot I",
-			"Evo Blueberry I",
-			"Evo Pumpkin I",
-			"Evo Mushroom I",
+			"Spooky Egg"
+			"Great Pumpkin"
+			"Poison Apple"
+			"Reaper"
 		},
 		["Traveling Shop"] = {
 			"Bee Egg",
@@ -170,17 +155,12 @@ getgenv().ConfigsKaitun = {
 			"Harvest Tool",
 		},
 		Lock = {
-			"Master Sprinkler",
-			"Godly Sprinkler",
-			"Advanced Sprinkler",
-			"Basic Sprinkler",
-			"Lightning Rod",
 		},
 	},
 
 	Eggs = {
 		Place = {
-			"Fall Egg",
+			"Spooky Egg",
 			"Jungle Egg",
 			"Anti Bee Egg",
 			"Bug Egg",
@@ -188,6 +168,7 @@ getgenv().ConfigsKaitun = {
 			"Rare Egg",
 		},
 		Buy = {
+			"Spooky Egg",
 			"Jungle Egg",
 			"Bee Egg",
 			"Rare Egg",
@@ -218,20 +199,21 @@ getgenv().ConfigsKaitun = {
 			},
 			["Limit Upgrade"] = 5, -- max is 5 (more than or lower than 1 will do nothing)
 			["Equip When Done"] = {
-				["Chubby Chipmunk"] = { 8, 100, 1 },
-				["Wasp"] = { 1, 100, 2 },
-				["Tarantula Hawk"] = { 1, 100, 3 },
-				["Barn Owl"] = { 1, 100, 4 },
-                ["Sunny-Side Chicken"] = { 5, 100, 5 },
-                ["Rooster"] = { 4, 100, 6 },
+				["Wasp"] = { 1, 100, 1 },
+				["Tarantula Hawk"] = { 1, 100, 2 },
+				["Barn Owl"] = { 1, 100, 3 },
+                ["Sunny-Side Chicken"] = { 5, 100, 4 },
+                ["Rooster"] = { 4, 100, 5 },
 			},
 		},
 		Unfavorite_AllPet = false,
 		Favorite_LockedPet = false,
 		Locked_Pet_Age = 60, -- pet that age > 60 will lock
 		Locked = {
-			["Chubby Chipmunk"] = 8,
 			"Chinchilla",
+			"Headless Horseman",
+			"Reaper",
+			["Black Cat"] =2,
 			"Silver Dragonfly",
 			"Mizuchi",
 			"Tiger",
@@ -306,6 +288,7 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+			    "Headless Horseman",				
 				"Chinchilla",
 				"Tiger",
 				"Mizuchi",
