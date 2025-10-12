@@ -1,5 +1,4 @@
 local keys = {  -- Add as many key
-    "gzkeNSghvCsQmNHahKLTlpSypoICBaUy", 
     "mwfLupoFlgICYtSRAQVyxRNUDFhHIzls", 
     "VGFrCBdMPeMlTAlaAKJApyIuUFjuXlWk",
     "ONFSrVpgMFgEFxwxbTukMFqHWlUNxRNi",
