@@ -12,7 +12,7 @@ setfpscap(3)
 getgenv().gagConfig = {
     -- Event:
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Paradise Egg", "Fall Egg", "Loquat", "Feijoa", "Pitcher Plant" },
-    BUY_EVENT_SHOP = { "Spooky Egg", "Reaper", "Ghost Bear" },
+    BUY_EVENT_SHOP = { "Spooky Egg", "Reaper", ["Ghost Bear"] = 4, "Great Pumpkin" },
     
     MAX_PLANTS = 250,
     DESTROY_UNTIL_MIN_PLANTS = 200,
@@ -44,7 +44,7 @@ getgenv().gagConfig = {
     KEEP_PETS_WEIGHT = 5,
     KEEP_PETS_AGE = 90,
     
-    EQUIP_PETS = { ["Tarantula Hawk"] = 1 , ["Wasp"] = 1 , ["Sunny-Side Chicken"] = 4 , ["Ghost Bear"] = 1 , ["Rooster"] = 8 },
+    EQUIP_PETS = { ["Sunny-Side Chicken"] = 4 , ["Ghost Bear"] = 4 , ["Rooster"] = 8 },
 
     BUY_GEAR_SHOP = { "Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler", "Trading Ticket", "Watering Can", "Levelup Lollipop" },
     USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Grandmaster Sprinkler" },
