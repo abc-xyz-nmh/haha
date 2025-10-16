@@ -40,7 +40,7 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},
     SKIP_HARVEST_MUTATIONS = {},
 
-    KEEP_PETS = { "Headless Horseman", "Reaper", ["Ghost Bear"] = 4 , "Chinchilla", "Chubby Chipmunk", "Mizuchi", "Tiger", "Red Panda", "Barn Owl", "Swan", ["Space Squirrel"] = 2 , "Phoenix", "Cockatrice", "Griffin", "Golden Goose", "Spriggan", "Junkbot", "Gorilla Chef", "Lobster Thermidor", "French Fry Ferret", "Corrupted Kitsune", "Raiju", "Kitsune", "Koi", "Bald Eagle",  "Spinosaurus", "Brontosaurus", "T-Rex", "Seal", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Pack Bee",  "Bear Bee", "Hamster", "Blood Owl", "Cooked Owl", "Golden Bee", "Owl", "Chicken Zombie", ["Blood Kiwi"] = 2, "Capybara" , ["Starfish"] = 2, ["Rooster"] = 2, ["Chicken"] = 8 },
+    KEEP_PETS = { "Headless Horseman", ["Reaper"] = 3 , ["Ghost Bear"] = 4 , "Chinchilla", "Chubby Chipmunk", "Mizuchi", "Tiger", "Red Panda", "Barn Owl", "Swan", ["Space Squirrel"] = 2 , "Phoenix", "Cockatrice", "Griffin", "Golden Goose", "Spriggan", "Junkbot", "Gorilla Chef", "Lobster Thermidor", "French Fry Ferret", "Corrupted Kitsune", "Raiju", "Kitsune", "Koi", "Bald Eagle",  "Spinosaurus", "Brontosaurus", "T-Rex", "Seal", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Pack Bee",  "Bear Bee", "Hamster", "Blood Owl", "Cooked Owl", "Golden Bee", "Owl", "Chicken Zombie", ["Blood Kiwi"] = 2, "Capybara" , ["Starfish"] = 2, ["Rooster"] = 2, ["Chicken"] = 8 },
     KEEP_PETS_WEIGHT = 5,
     KEEP_PETS_AGE = 90,
     
@@ -51,7 +51,7 @@ getgenv().gagConfig = {
 
     PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1394039615949639822/ru1nhLaHQ0YheuaUN238iKf337NATfBXg224aTMSInFTWhNg24i7aPpFSIy6NAUAfr3r",
     SHOW_PUBLIC_DISCORD_ID = true,
-    NOTIFY_PETS = { "Headless Horseman", "Reaper", "Fortune Squirrel", "Chinchilla", "Tiger", "Barn Owl", "Swan", "Marmot", "Space Squirrel", "Sugar Glider", "Phoenix", "Cockatrice", "Gnome", "Griffin", "Golden Goose", "Corrupted Kitsune", "Raiju", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
+    NOTIFY_PETS = { "Headless Horseman", "Fortune Squirrel", "Chinchilla", "Tiger", "Barn Owl", "Swan", "Marmot", "Space Squirrel", "Sugar Glider", "Phoenix", "Cockatrice", "Gnome", "Griffin", "Golden Goose", "Corrupted Kitsune", "Raiju", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
     NOTIFY_PETS_WEIGHT = 5,
     DISCORD_ID = "",
     WEBHOOK_NOTE = "abc",
