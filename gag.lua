@@ -29,7 +29,6 @@ getgenv().gagConfig = {
     MAX_REBIRTH_SHECKLES = 0,
     ADD_FRIEND = true,
     OPEN_ALL_SEED_PACK = true,
-    LEVELUP_LOLLIPOP_MIN_LEVEL = 90  -- Auto use levelup lollipop if pet lvl 90-99,
 
     BUY_COSMETIC_SHOP = { ["Cooking Kit"] = 3 },
     
