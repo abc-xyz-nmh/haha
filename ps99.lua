@@ -1,4 +1,4 @@
-setfpscap(7)
+setfpscap(4)
 repeat task.wait() until game:IsLoaded()
 repeat task.wait() until game.Players
 repeat task.wait() until game.Players.LocalPlayer
