@@ -11,7 +11,7 @@ settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
 settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
 settings().Rendering.GraphicsMode = 9
 
-script_key = "QcpVpvdtuDEqxTNKfOgunEijmNfMkgiK";
+script_key = "KzwAmkbvZWwcaiBhbWjNVpCyGPlhPwBg";
 getgenv().GGFX_MODE = 1
 getgenv().GDO_HALLOWEEN_WORLD = true
 getgenv().GHALLOWEEN_WORLD_ALLOW_WORSE_EGG_PLACEMENT = true
