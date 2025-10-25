@@ -19,6 +19,7 @@ getgenv().GHALLOWEEN_WORLD_HATCH_SPOTS = 2
 getgenv().GHALLOWEEN_WORLD_USE_BOOSTS = true
 getgenv().GHALLOWEEN_WORLD_BUY_FROM_SPECIFIC_HOUSE = {1,2,3}
 getgenv().GHALLOWEEN_WORLD_BUY_FROM_HOUSES_BELOW = true
+getgenv().GALLOW_HOPPING = true
 getgenv().GZONE_TO = 1
 getgenv().GEVENT_UPGRADES = {
   "HalloweenCandyMultiplier",
@@ -36,7 +37,7 @@ getgenv().GMAIL_RECEIVERS = {"NguyenVanThuan47"}
 getgenv().GMAX_MAIL_COST = "2m" 
 getgenv().GMAIL_ITEMS = {
 ["All Huges"] = {Class = "Pet", Id = "All Huges", MinAmount = 1},
-["Send Diamonds"] = {Class = "Currency", Id = "Diamonds", KeepAmount = "5m", MinAmount = "100m"}, -- mail diamonds, to enable lower MinAmount..
+["Send Diamonds"] = {Class = "Currency", Id = "Diamonds", KeepAmount = "5m", MinAmount = "50m"}, -- mail diamonds, to enable lower MinAmount..
 ["Hype Egg 2"] = {Class = "Lootbox", Id = "Hype Egg 2", MinAmount = 1},
 ["Daycare egg 5"] = {Class = "Egg", Id = "Huge Machine Egg 5", MinAmount = 1},
 ["Secret pet1"] = {Class = "Pet", Id = "Rainbow Swirl", MinAmount = 1, AllVariants = true},
