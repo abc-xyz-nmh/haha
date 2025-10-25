@@ -11,9 +11,13 @@ settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
 settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
 settings().Rendering.GraphicsMode = 9
 
-script_key = "KzwAmkbvZWwcaiBhbWjNVpCyGPlhPwBg";
+script_key = "QcpVpvdtuDEqxTNKfOgunEijmNfMkgiK";
 getgenv().GGFX_MODE = 1
 getgenv().GDO_HALLOWEEN_WORLD = true
+getgenv().GHALLOWEEN_WORLD_ALLOW_WORSE_EGG_PLACEMENT = true
+getgenv().GHALLOWEEN_WORLD_HATCH_SPOTS = 2
+getgenv().GHALLOWEEN_WORLD_USE_BOOSTS = true
+getgenv().GHALLOWEEN_WORLD_BUY_FROM_SPECIFIC_HOUSE = {1,2,3}
 getgenv().GHALLOWEEN_WORLD_BUY_FROM_SPECIFIC_HOUSE = 3
 getgenv().GHALLOWEEN_WORLD_BUY_FROM_HOUSES_BELOW = true
 getgenv().GZONE_TO = 1
