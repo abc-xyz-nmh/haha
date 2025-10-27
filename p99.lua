@@ -21,6 +21,7 @@ getgenv().GHOP_ON_STAFF = true --if true it moves you back to a new public world
 getgenv().GKICK_ON_STAFF = true --if true it simulates a kick from server
 getgenv().GHALLOWEEN_WORLD_USE_BOOSTS = true
 getgenv().GHALLOWEEN_WORLD_BUY_FROM_SPECIFIC_HOUSE = {1,2,3,4}
+getgenv().GHALLOWEEN_WORLD_RECIPES_TO_DO = {1,2,3,4,5}
 getgenv().GHALLOWEEN_WORLD_BUY_FROM_HOUSES_BELOW = true
 getgenv().GALLOW_HOPPING = true
 getgenv().GZONE_TO = 1
