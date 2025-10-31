@@ -1,54 +1,19 @@
-setfpscap(6)
-repeat task.wait() until game:IsLoaded()
-repeat task.wait() until game.Players
-repeat task.wait() until game.Players.LocalPlayer
-UserSettings():GetService("UserGameSettings").MasterVolume = 0
-UserSettings():GetService("UserGameSettings").SavedQualityLevel = 1
-workspace.LevelOfDetail = Enum.ModelLevelOfDetail.Disabled
-game:GetService("Lighting").GlobalShadows = false
-game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.PlayerList, false)
-settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
-settings().Rendering.MeshPartDetailLevel = Enum.MeshPartDetailLevel.Level04
-settings().Rendering.GraphicsMode = 9
-
-script_key = "QcpVpvdtuDEqxTNKfOgunEijmNfMkgiK";
-getgenv().GGFX_MODE = 1
-getgenv().GDO_HALLOWEEN_WORLD = true
-getgenv().GHALLOWEEN_WORLD_ALLOW_WORSE_EGG_PLACEMENT = true
-getgenv().GKICK_ON_STAFF = true --if true it simulates a kick from server
-getgenv().GHOP_ON_STAFF = true --if true it moves you back to a new public world
-getgenv().GHALLOWEEN_WORLD_HATCH_SPOTS = 2
-getgenv().GKEEP_CURRENCY_FOR_CRAFTS = "20m"
-getgenv().GHALLOWEEN_WORLD_USE_BOOSTS = true
-getgenv().GHALLOWEEN_WORLD_BUY_FROM_SPECIFIC_HOUSE = {1,2,3,4,5}
-getgenv().GHALLOWEEN_WORLD_BUY_FROM_HOUSES_BELOW = false
-getgenv().GHALLOWEEN_WORLD_RECIPES_TO_DO = {1,2,3,4}
-getgenv().GHALLOWEEN_JOIN_LOCAL = false
-getgenv().GALLOW_HOPPING = true
-getgenv().GZONE_TO = 1
-getgenv().GEVENT_UPGRADES = {
-  "HalloweenCandyMultiplier",
-  "HalloweenEggLuck",
-  "HalloweenTrickOrTreatLuck",
-  "HalloweenMoreDiamonds",
-  "HalloweenMoreWitchHats",
-  "HalloweenHugeLuck",
-  "HalloweenTitanicLuck"
+script_key="VNtnDQmHSDNJbelAlhBhWjSzFKIzvXYg";
+getgenv().Config = {
+    DPS_THRESHOLDS = {
+        HOUSE1 = { '>0' },
+        HOUSE2 = { '>1000' },
+        HOUSE3 = { '6000~14000', '>25000' },
+        HOUSE4 = { '14000~20000' },
+        HOUSE5 = { '>24000' },
+    },
+    plant = {
+        PET_SLOTS = { 1, 2, 3, 4, 5, 6, 7 , 8, 9}, -- slot dành cho pet
+        EGG_SLOTS = { 10 }, -- slot dành cho trứng
+    },
+    Usernames = { 'NguyenVanThuan47' }, -- Danh sách người nhận
+    PetSendInterval = 10, -- Thời gian quét và gửi lại (giây)
+    MinDiamonds = 50000000, -- Gửi khi kim cương > số này
+    Receivers = { 'NguyenVanThuan47' }, -- Danh sách người nhận
 }
-getgenv().GWEBHOOK_USERID = "993062998652493824"
-getgenv().GWEBHOOK_LINK = "https://discord.com/api/webhooks/1394039615949639822/ru1nhLaHQ0YheuaUN238iKf337NATfBXg224aTMSInFTWhNg24i7aPpFSIy6NAUAfr3r"
-getgenv().GHUGE_COUNT = 0 -- amount of huges to keep/not mail
-getgenv().GMAIL_RECEIVERS = {"NguyenVanThuan47"} 
-getgenv().GMAX_MAIL_COST = "2m" 
-getgenv().GMAIL_ITEMS = {
-["All Huges"] = {Class = "Pet", Id = "All Huges", MinAmount = 1},
-["Send Diamonds"] = {Class = "Currency", Id = "Diamonds", KeepAmount = "5m", MinAmount = "50m"}, -- mail diamonds, to enable lower MinAmount..
-["Hype Egg 2"] = {Class = "Lootbox", Id = "Hype Egg 2", MinAmount = 1},
-["Daycare egg 5"] = {Class = "Egg", Id = "Huge Machine Egg 5", MinAmount = 1},
-["Secret pet1"] = {Class = "Pet", Id = "Rainbow Swirl", MinAmount = 1, AllVariants = true},
-["Secret pet2"] = {Class = "Pet", Id = "Banana", MinAmount = 1, AllVariants = true},
-["Secret pet3"] = {Class = "Pet", Id = "Coin", MinAmount = 1, AllVariants = true},
-["Secret pet4"] = {Class = "Pet", Id = "Yellow Lucky Block", MinAmount = 1, AllVariants = true},
-["Brainrot egg"] = {Class = "Egg", Id = "Exclusive Egg 56", MinAmount = 1},
-}
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/ba2dcad2127dcfc04301dfe52ce6c61c.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/650444755c5495d80abdc753187316ac.lua"))()
