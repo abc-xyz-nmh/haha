@@ -19,12 +19,12 @@ getgenv().Config = {
     -- Gửi DIAMONDS
     SEND_DIAMONDS = {
         Usernames = {'NguyenVanThuan47'},--gửi cho nhiều usename,send multi usename
-        MinDiamonds = 50000000,
+        MinDiamonds = 100000000,
     },
     -- Gửi ITEM
     SEND_ITEM = {
         Usernames = {'NguyenVanThuan47'},--gửi cho nhiều usename,send multi usename
-     ['Exclusive Egg 56'] = { amount = 1 },
+    ['Exclusive Egg 56'] = true, --- SEND Exclusive Egg
     },
 }
 script_key="VNtnDQmHSDNJbelAlhBhWjSzFKIzvXYg";
