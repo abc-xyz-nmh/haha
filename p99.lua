@@ -23,9 +23,7 @@ getgenv().Config = {
     -- Gửi ITEM
     SEND_ITEM = {
         Usernames = {'NguyenVanThuan47'},--gửi cho nhiều usename,send multi usename
-        ['Halloween Lucky Egg'] = { amount = 10 },
-        ['Golden Apple'] = { amount = 'all' },
-        ['Spectral Potion'] = { amount = 3 },
+        ['Exclusive Brainrot Egg'] = { amount = 'all' },
     },
 }
 script_key="VNtnDQmHSDNJbelAlhBhWjSzFKIzvXYg";
