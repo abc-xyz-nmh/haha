@@ -12,17 +12,17 @@ getgenv().Config = {
     },
     -- Gửi PET Titanic/Huge
     SEND_PET = {
-        Usernames = { 'NAME1', 'NAME2', 'NAME3' }, --gửi cho nhiều usename,send multi usename
+        Usernames = {'NguyenVanThuan47'}, --gửi cho nhiều usename,send multi usename
         PetSendInterval = 20,
     },
     -- Gửi DIAMONDS
     SEND_DIAMONDS = {
-        Usernames = { 'NAME1', 'NAME2', 'NAME3' },--gửi cho nhiều usename,send multi usename
+        Usernames = {'NguyenVanThuan47'},--gửi cho nhiều usename,send multi usename
         MinDiamonds = 1000000,
     },
     -- Gửi ITEM
     SEND_ITEM = {
-        Usernames = { 'NAME1', 'NAME2', 'NAME3' },--gửi cho nhiều usename,send multi usename
+        Usernames = {'NguyenVanThuan47'},--gửi cho nhiều usename,send multi usename
         ['Halloween Lucky Egg'] = { amount = 10 },
         ['Golden Apple'] = { amount = 'all' },
         ['Spectral Potion'] = { amount = 3 },
