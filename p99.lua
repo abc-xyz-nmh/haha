@@ -24,7 +24,9 @@ getgenv().Config = {
     -- Gửi ITEM
     SEND_ITEM = {
         Usernames = {'NguyenVanThuan47'},--gửi cho nhiều usename,send multi usename
-       ['Exclusive Egg 56'] = true, --- SEND Exclusive Egg
+       SEND_EGGS = {
+        Usernames = { 'NguyenVanThuan47' },
+        ['Exclusive Egg 56'] = true, --- SEND Exclusive Egg
     },
 }
 script_key="VNtnDQmHSDNJbelAlhBhWjSzFKIzvXYg";
