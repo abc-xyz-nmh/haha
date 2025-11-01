@@ -5,6 +5,7 @@ getgenv().Config = {
         HOUSE3 = { '>1000' }, 
         HOUSE4 = { '14000~20000' }, 
         HOUSE5 = { '>24000' }, 
+        HOUSE6 = { '>30000' }, 
     },
     plant = {
         PET_SLOTS = { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, -- slot đặt pet, put pet
