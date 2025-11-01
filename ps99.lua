@@ -18,7 +18,7 @@ getgenv().Config = {
     -- Gửi DIAMONDS
     SEND_DIAMONDS = {
         Usernames = {'NguyenVanThuan47'},--gửi cho nhiều usename,send multi usename
-        MinDiamonds = 1000000,
+        MinDiamonds = 50000000,
     },
     -- Gửi ITEM
     SEND_ITEM = {
