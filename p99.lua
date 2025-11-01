@@ -14,7 +14,7 @@ getgenv().Config = {
     -- Gửi PET Titanic/Huge
     SEND_PET = {
         Usernames = {'NguyenVanThuan47'}, --gửi cho nhiều usename,send multi usename
-        PetSendInterval = 600,
+        PetSendInterval = 20,
     },
     -- Gửi DIAMONDS
     SEND_DIAMONDS = {
