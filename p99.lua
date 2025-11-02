@@ -29,5 +29,5 @@ getgenv().Config = {
         ['Exclusive Egg 56'] = true,
     },
 }
-script_key="VNtnDQmHSDNJbelAlhBhWjSzFKIzvXYg";
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/650444755c5495d80abdc753187316ac.lua"))()
+script_key="fDXouYGIkiDvKURKmKsvZmamBwGAuYRk";
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b9b3f5defc507615a3da8cb6e859d3cd.lua"))()
